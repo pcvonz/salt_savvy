@@ -16,10 +16,13 @@ var salt_par
 var completed = false
 var bar
 var down = false
+var anim_time = 0
+var anim_played = false
+
 func _ready():
 	set_process(true)
 	set_process_input(true)
-	get_node("Label").set_text(str("Salt for ", str(salt_time), " seconds"))
+	#get_node("Label").set_text(str("Salt for ", str(salt_time), " seconds"))
 	salt_par = get_node("Particles2D")
 	salt_par.set_emitting(false)
 	bar = get_node("ProgressBar")
@@ -40,8 +43,13 @@ func _process(delta):
 		else:
 			bar.set_value(0)
 	else:
+		anim_time += delta
+		if(anim_time > 4):
+			if not get_node("../food/AnimationPlayer").is_playing() and not anim_played:
+				get_node("../food/AnimationPlayer").play("food exit")
+				anim_played = true
 		if Input.is_action_pressed("salt"):
-			get_tree().change_scene("res://scenes/main.tscn")
+			get_node("../food/AnimationPlayer").play("food exit")
 
 
 func _input(event):
