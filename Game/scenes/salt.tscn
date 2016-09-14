@@ -1,0 +1,77 @@
+[gd_scene load_steps=2 format=1]
+
+[ext_resource path="res://scripts/salt.gd" type="Script" id=1]
+
+[node name="Salting" type="Node2D"]
+
+script/script = ExtResource( 1 )
+salt_time = 5.0
+error_range = 2.0
+win_text = "Congratulations, you pro salter! Press the salt button to continue"
+
+[node name="Particles2D" type="Particles2D" parent="."]
+
+transform/pos = Vector2( -38.4473, 68.6177 )
+transform/scale = Vector2( 6.12465, 6.12465 )
+config/amount = 861
+config/lifetime = 2.6
+config/emit_timeout = 0.8
+config/emitting = false
+params/direction = 0.0
+params/spread = 57.94
+params/linear_velocity = 20.0
+params/spin_velocity = 0.0
+params/orbit_velocity = 0.0
+params/gravity_direction = 4.69
+params/gravity_strength = 9.8
+params/radial_accel = 0.0
+params/tangential_accel = 0.0
+params/damping = 0.0
+params/initial_angle = 0.0
+params/initial_size = 1.0
+params/final_size = 1.0
+params/hue_variation = 0.0
+params/anim_speed_scale = 1.0
+params/anim_initial_pos = 0.0
+randomness/direction = 1.0
+randomness/spread = 1.0
+
+[node name="saltshaker" type="Sprite" parent="."]
+
+transform/pos = Vector2( 19.4188, 94.5776 )
+transform/scale = Vector2( -126.976, -28.7631 )
+
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -105.0
+margin/top = 172.0
+margin/right = 8.0
+margin/bottom = 186.0
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = -258.0
+margin/top = 4.0
+margin/right = 198.0
+margin/bottom = 20.0
+range/min = 0.0
+range/max = 1.483
+range/step = 1.0
+range/page = 0.0
+range/value = 0.417
+range/exp_edit = false
+range/rounded = false
+percent/visible = false
+
+
