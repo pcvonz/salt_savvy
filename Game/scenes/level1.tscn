@@ -1,24 +1,24 @@
-[gd_scene load_steps=4 format=1]
+[gd_scene load_steps=3 format=1]
 
 [ext_resource path="res://scenes/salt.tscn" type="PackedScene" id=1]
 [ext_resource path="res://sprites/L1 alley.png" type="Texture" id=2]
-[ext_resource path="res://scenes/chowder.tscn" type="PackedScene" id=3]
 
 [node name="Node2D" type="Node2D"]
 
 [node name="Salting" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 81.5938, 307.424 )
+transform/pos = Vector2( 14.9355, 107.449 )
 transform/scale = Vector2( 1.32137, 1 )
+salt_time = 2.0
 win_text = "Congratulations, you pro salter! Beep."
+amount_needed = 5
 
 [node name="background" type="Sprite" parent="."]
 
 visibility/behind_parent = true
-transform/pos = Vector2( 960, 540 )
+transform/pos = Vector2( 319.511, 237.626 )
+transform/scale = Vector2( 0.334241, 0.334241 )
 texture = ExtResource( 2 )
 __meta__ = { "_edit_lock_":true }
-
-[node name="food" parent="." instance=ExtResource( 3 )]
 
 

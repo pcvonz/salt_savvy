@@ -11,7 +11,7 @@ script/script = ExtResource( 1 )
 
 [node name="Observer" parent="." instance=ExtResource( 2 )]
 
-transform/local = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.91968, 0 )
+transform/local = Transform( -0.0375402, 0, -0.999295, 0, 1, 0, 0.999295, 0, -0.0375402, 0, 1.91968, -8.81845 )
 
 [node name="Spatial" parent="." instance=ExtResource( 3 )]
 
